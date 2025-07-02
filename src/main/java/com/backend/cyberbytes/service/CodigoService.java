@@ -91,7 +91,7 @@ public class CodigoService {
                         </head>
                         <body>
                             <nav id="navbar">
-                                <h1>Ong Conciência</h1>
+                                <h1>CyberBytes</h1>
                             </nav>
                             <div class="email-container">
                                 <h4>Verificação de email</h4>
@@ -175,7 +175,7 @@ public class CodigoService {
                         </head>
                         <body>
                             <nav id="navbar">
-                                <h1>Ong Conciência</h1>
+                                <h1>CyberBytes</h1>
                             </nav>
                             <div class="email-container">
                                 <h4>Alterar Senha</h4>
@@ -218,7 +218,7 @@ public class CodigoService {
         Duration duration = Duration.between(codigo.getDia(), LocalDateTime.now());
 
         if (codigo.getCodigo() == tentativa && duration.toHours() <= 24) {
-            deleteCodigo(codigo); // <-- MANTENHA AQUI!
+            deleteCodigo(codigo);
             System.out.println("DEBUG: Código válido e não expirado para o email: " + email);
             return true;
         } else {
